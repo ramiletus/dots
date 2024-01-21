@@ -2,6 +2,38 @@
     <span>Score: </span><span id="scoreEl">0</span>
 </div>
 
+<div id="modal"
+    style=
+        "z-index: 1000;
+        position: fixed;
+        inset: 0px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        border-radius: 9999px;">
+    <div style=
+            "background-color: white;
+            margin: 0 auto;
+            max-width: 28rem;
+            text-align: center;">
+        <h1 id="finalScore"
+            style=
+            "line-height: 1;">
+            0
+        </h1>
+        <p>points</p>
+        <div>
+            <button id="restartGameBtn"
+                style=
+                    "background-color: rgb(59 130 246);
+                    border-radius: 9999px;
+                    width: auto;">
+                Restart game
+            </button>
+        </div>
+    </div>
+</div>
+
 <canvas>
 </canvas>
 
