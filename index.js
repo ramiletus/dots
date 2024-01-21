@@ -1,9 +1,10 @@
 const canvas = document.querySelector('canvas')
-
 const c = canvas.getContext('2d')
 
 canvas.width = innerWidth
 canvas.height = innerHeight
+
+const scoreEl = document.querySelector('#scoreEl')
 
 const maxEnemyRadius = 30
 const minEnemyRadius = 10
@@ -160,7 +161,16 @@ function spawnEnemies() {
 }
 
 let animationId
+let score = 0
+
+function scoreN(n) {
+    score += n
+    scoreEl.innerHTML = score.toString()
+}
+
 function animate() {
+
+
     animationId = requestAnimationFrame(animate)
 
     c.fillStyle = 'rgba(0, 0, 0, 0.1)'
@@ -209,7 +219,7 @@ function animate() {
             //if enemy and projectile collide
             if (distanceFromEnemyToProj - enemy.radius - proj.radius < 1)
             {
-
+                scoreN(50)
                 //create explosions
                 for (let i = 0; i < 8; i++) {
                     const particle = new Particle(
@@ -228,6 +238,7 @@ function animate() {
                 enemy.radius = enemy.radius - minEnemyRadius
 
                 if (enemy.radius < minEnemyRadius) {
+                    scoreN(50)
                     setTimeout(() =>
                         { enemiesArray.splice(enemyIndex, 1)}
                     )
@@ -235,6 +246,7 @@ function animate() {
                 setTimeout(() => {
                     projectileArray.splice(projIndex, 1)
                 }, 0)
+
             }
         })
 
