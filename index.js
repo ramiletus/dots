@@ -112,6 +112,7 @@ class Particle {
 const middleX = canvas.width / 2
 const middleY = canvas.height / 2
 
+//behaviour
 player = new Player(middleX, middleY, 10, 'white')
 
 //set of projectiles
