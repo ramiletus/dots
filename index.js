@@ -294,6 +294,7 @@ addEventListener('click',
         projectileArray.push(projectile)
 })
 
+//restartButton listener
 restartGameBtnEl.addEventListener('click',
     () => {
         init()
