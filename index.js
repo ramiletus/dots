@@ -183,6 +183,7 @@ function spawnEnemies() {
 }
 
 
+//update score
 function scoreN(n) {
     score += n
     scoreEl.innerHTML = score.toString()
