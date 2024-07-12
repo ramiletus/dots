@@ -13,6 +13,7 @@ const maxEnemyRadius = 30
 const minEnemyRadius = 10
 const enemyIntervalMillis = 1000
 
+//Classes
 class Player {
     constructor(x, y, radius, color) {
         this.x = x
