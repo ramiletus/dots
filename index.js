@@ -304,7 +304,7 @@ restartGameBtnEl.addEventListener('click',
     }
 )
 
-//begin
+//beginning game loop
 modalEl.style.display = 'none'
 init()
 animate()
